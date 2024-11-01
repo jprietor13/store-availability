@@ -1,5 +1,7 @@
+import { ListStores } from "./components/ListStores";
+
 function App() {
-  return <>InstaStore</>;
+  return <ListStores />;
 }
 
 export default App;
