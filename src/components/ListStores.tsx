@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { stores } from "../services/stores";
 import { useStore } from "../hooks/useStore";
+import { StoreDetails } from "./StoreDetails";
 
 export const ListStores = () => {
   const { data, setData } = useStore();
@@ -11,5 +12,9 @@ export const ListStores = () => {
 
   console.log(data);
 
-  return <div>ListStores</div>;
+  return (
+    <section>
+      <StoreDetails store={data} />
+    </section>
+  );
 };

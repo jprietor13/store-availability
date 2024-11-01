@@ -6,8 +6,9 @@ export interface DataStore {
     lat: number;
     lng: number;
   };
+  stock: number;
   nextDeliveryTime: string;
-  detalles: {
+  details: {
     address: string;
     categories: string[];
     description: string;

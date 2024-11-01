@@ -4,8 +4,9 @@ export const stores = [
     storeName: "Tienda Aventura",
     isOpen: true,
     coordinates: { lat: 4.60971, lng: -74.08175 },
-    nextDeliveryTime: "15:30",
-    detalles: {
+    stock: 8,
+    nextDeliveryTime: "18:00",
+    details: {
       address: "Calle 1 # 10-20",
       categories: ["Alimentos", "Tecnología"],
       description:
@@ -17,8 +18,9 @@ export const stores = [
     storeName: "Tienda Gourmet",
     isOpen: true,
     coordinates: { lat: 4.60067, lng: -74.08385 },
-    nextDeliveryTime: "16:00",
-    detalles: {
+    stock: 25,
+    nextDeliveryTime: "16:30",
+    details: {
       address: "Carrera 2 # 15-45",
       categories: ["Alimentos"],
       description:
@@ -30,8 +32,9 @@ export const stores = [
     storeName: "Supermercado Express",
     isOpen: false,
     coordinates: { lat: 4.60905, lng: -74.07983 },
-    nextDeliveryTime: "Cerrado",
-    detalles: {
+    stock: 12,
+    nextDeliveryTime: "17:00",
+    details: {
       address: "Avenida 3 # 8-30",
       categories: ["Alimentos", "Medicina"],
       description:
@@ -43,8 +46,9 @@ export const stores = [
     storeName: "Mercado Urbano",
     isOpen: true,
     coordinates: { lat: 4.61442, lng: -74.06373 },
-    nextDeliveryTime: "15:45",
-    detalles: {
+    stock: 45,
+    nextDeliveryTime: "15:40",
+    details: {
       address: "Calle 5 # 20-15",
       categories: ["Alimentos"],
       description:
@@ -56,8 +60,9 @@ export const stores = [
     storeName: "Tienda Eco",
     isOpen: true,
     coordinates: { lat: 4.61713, lng: -74.07253 },
-    nextDeliveryTime: "16:10",
-    detalles: {
+    stock: 30,
+    nextDeliveryTime: "16:00",
+    details: {
       address: "Calle 10 # 12-22",
       categories: ["Alimentos", "Medicina"],
       description:
@@ -69,8 +74,9 @@ export const stores = [
     storeName: "Almacen de Todo",
     isOpen: false,
     coordinates: { lat: 4.61555, lng: -74.06968 },
-    nextDeliveryTime: "Cerrado",
-    detalles: {
+    stock: 3,
+    nextDeliveryTime: "18:30",
+    details: {
       address: "Calle 6 # 25-10",
       categories: ["Tecnología"],
       description:
@@ -82,8 +88,9 @@ export const stores = [
     storeName: "Tienda Moderna",
     isOpen: true,
     coordinates: { lat: 4.60887, lng: -74.07859 },
-    nextDeliveryTime: "15:50",
-    detalles: {
+    stock: 40,
+    nextDeliveryTime: "15:45",
+    details: {
       address: "Carrera 3 # 16-28",
       categories: ["Tecnología", "Alimentos"],
       description:
@@ -95,8 +102,9 @@ export const stores = [
     storeName: "Tienda Saludable",
     isOpen: true,
     coordinates: { lat: 4.61403, lng: -74.06242 },
-    nextDeliveryTime: "16:20",
-    detalles: {
+    stock: 10,
+    nextDeliveryTime: "17:45",
+    details: {
       address: "Calle 11 # 5-50",
       categories: ["Alimentos", "Medicina"],
       description:
@@ -108,8 +116,9 @@ export const stores = [
     storeName: "Tienda Rápida",
     isOpen: false,
     coordinates: { lat: 4.60999, lng: -74.08132 },
-    nextDeliveryTime: "Cerrado",
-    detalles: {
+    stock: 20,
+    nextDeliveryTime: "16:30",
+    details: {
       address: "Calle 7 # 22-15",
       categories: ["Alimentos"],
       description:
@@ -121,8 +130,9 @@ export const stores = [
     storeName: "Mercado Local",
     isOpen: false,
     coordinates: { lat: 4.61076, lng: -74.08056 },
-    nextDeliveryTime: "Cerrado",
-    detalles: {
+    stock: 0,
+    nextDeliveryTime: "18:45",
+    details: {
       address: "Calle 4 # 14-40",
       categories: ["Alimentos"],
       description: "Mercado que promueve productos locales y de la región.",
@@ -133,8 +143,9 @@ export const stores = [
     storeName: "Tienda Tradicional",
     isOpen: true,
     coordinates: { lat: 4.60912, lng: -74.08678 },
-    nextDeliveryTime: "15:40",
-    detalles: {
+    stock: 35,
+    nextDeliveryTime: "16:00",
+    details: {
       address: "Calle 9 # 11-30",
       categories: ["Alimentos", "Tecnología"],
       description:
@@ -146,8 +157,9 @@ export const stores = [
     storeName: "Almacén Barato",
     isOpen: false,
     coordinates: { lat: 4.6086, lng: -74.08345 },
-    nextDeliveryTime: "Cerrado",
-    detalles: {
+    stock: 7,
+    nextDeliveryTime: "18:15",
+    details: {
       address: "Calle 8 # 19-45",
       categories: ["Alimentos"],
       description:
@@ -159,8 +171,9 @@ export const stores = [
     storeName: "Tienda Fresca",
     isOpen: true,
     coordinates: { lat: 4.60792, lng: -74.0801 },
-    nextDeliveryTime: "16:05",
-    detalles: {
+    stock: 15,
+    nextDeliveryTime: "16:45",
+    details: {
       address: "Calle 2 # 18-50",
       categories: ["Alimentos", "Medicina"],
       description:
@@ -172,8 +185,9 @@ export const stores = [
     storeName: "Tienda Familiar",
     isOpen: true,
     coordinates: { lat: 4.61148, lng: -74.07223 },
-    nextDeliveryTime: "16:15",
-    detalles: {
+    stock: 50,
+    nextDeliveryTime: "15:35",
+    details: {
       address: "Carrera 1 # 30-55",
       categories: ["Alimentos"],
       description:
@@ -185,8 +199,9 @@ export const stores = [
     storeName: "Supermercado El Mejor",
     isOpen: false,
     coordinates: { lat: 4.61234, lng: -74.06945 },
-    nextDeliveryTime: "Cerrado",
-    detalles: {
+    stock: 5,
+    nextDeliveryTime: "18:30",
+    details: {
       address: "Calle 3 # 27-10",
       categories: ["Alimentos", "Tecnología"],
       description:
