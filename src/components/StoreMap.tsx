@@ -8,7 +8,8 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 900,
+  height: 550,
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -24,9 +25,11 @@ type Coordinates = {
 
 type Props = {
   coordinates: Coordinates;
+  storeName: string;
+  address: string;
 };
 
-const StoreMap: React.FC<Props> = ({ coordinates }) => {
+const StoreMap: React.FC<Props> = ({ coordinates, storeName, address }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -50,12 +53,18 @@ const StoreMap: React.FC<Props> = ({ coordinates }) => {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: 200 }}>
-          <h2 id="child-modal-title">Text in a child modal</h2>
-          <p id="child-modal-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
-          <Button onClick={handleClose}>Close Child Modal</Button>
+        <Box sx={{ ...style }}>
+          <div>
+            <h3>{storeName}</h3>
+            <span>{address}</span>
+          </div>
+          <iframe
+            width={"100%"}
+            height={"80%"}
+            style={{ flex: 1, border: "none" }}
+            src={`https://www.google.com/maps?q=${coordinates.lat},${coordinates.lng}&z=15&output=embed`}
+          ></iframe>
+          <Button onClick={handleClose}>Cerrar</Button>
         </Box>
       </Modal>
     </>

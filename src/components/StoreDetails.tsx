@@ -28,7 +28,11 @@ export const StoreDetails: React.FC<Props> = ({ store }) => {
           <br></br>
           <span>Stock en tienda: {item.stock}</span>
           <div>
-            <StoreMap coordinates={item.coordinates} />
+            <StoreMap
+              coordinates={item.coordinates}
+              storeName={item.storeName}
+              address={item.details.address}
+            />
           </div>
         </article>
       ))}
