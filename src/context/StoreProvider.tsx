@@ -3,7 +3,9 @@ import React, {
   Dispatch,
   SetStateAction,
   useState,
+  useEffect,
 } from "react";
+import { stores } from "../services/stores";
 import { DataStore } from "../typings/global";
 
 type Props = {
@@ -21,6 +23,10 @@ export const StoreContext = createContext<StoreContextProps | undefined>(
 
 export const StoreProvider: React.FC<Props> = ({ children }) => {
   const [data, setData] = useState<DataStore[]>([]);
+
+  useEffect(() => {
+    setData(stores);
+  }, []);
 
   return (
     <StoreContext.Provider
