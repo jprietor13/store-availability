@@ -1,5 +1,6 @@
 import React from "react";
 import { DataStore } from "../typings/global";
+import StoreMap from "./StoreMap";
 
 type Props = {
   store: DataStore[];
@@ -27,7 +28,7 @@ export const StoreDetails: React.FC<Props> = ({ store }) => {
           <br></br>
           <span>Stock en tienda: {item.stock}</span>
           <div>
-            <button>Ver ubicacion</button>
+            <StoreMap coordinates={item.coordinates} />
           </div>
         </article>
       ))}
