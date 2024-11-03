@@ -15,6 +15,8 @@ type Props = {
 type StoreContextProps = {
   data: DataStore[];
   setData: Dispatch<SetStateAction<DataStore[]>>;
+  getAddress: string;
+  setGetAddress: Dispatch<SetStateAction<string>>;
 };
 
 export const StoreContext = createContext<StoreContextProps | undefined>(
@@ -23,6 +25,7 @@ export const StoreContext = createContext<StoreContextProps | undefined>(
 
 export const StoreProvider: React.FC<Props> = ({ children }) => {
   const [data, setData] = useState<DataStore[]>([]);
+  const [getAddress, setGetAddress] = useState("");
 
   useEffect(() => {
     setData(stores);
@@ -33,6 +36,8 @@ export const StoreProvider: React.FC<Props> = ({ children }) => {
       value={{
         data,
         setData,
+        getAddress,
+        setGetAddress,
       }}
     >
       {children}
