@@ -12,11 +12,18 @@ type Props = {
   children: React.ReactNode;
 };
 
+type userCoordinates = {
+  lat: number;
+  lng: number;
+};
+
 type StoreContextProps = {
   data: DataStore[];
   setData: Dispatch<SetStateAction<DataStore[]>>;
   getAddress: string;
   setGetAddress: Dispatch<SetStateAction<string>>;
+  userCoords: userCoordinates;
+  setUserCoords: Dispatch<SetStateAction<userCoordinates>>;
 };
 
 export const StoreContext = createContext<StoreContextProps | undefined>(
@@ -26,6 +33,10 @@ export const StoreContext = createContext<StoreContextProps | undefined>(
 export const StoreProvider: React.FC<Props> = ({ children }) => {
   const [data, setData] = useState<DataStore[]>([]);
   const [getAddress, setGetAddress] = useState("");
+  const [userCoords, setUserCoords] = useState<userCoordinates>({
+    lat: 0,
+    lng: 0,
+  });
 
   useEffect(() => {
     setData(stores);
@@ -38,6 +49,8 @@ export const StoreProvider: React.FC<Props> = ({ children }) => {
         setData,
         getAddress,
         setGetAddress,
+        userCoords,
+        setUserCoords,
       }}
     >
       {children}

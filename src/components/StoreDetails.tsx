@@ -1,12 +1,18 @@
 import React from "react";
 import { DataStore } from "../typings/global";
 import StoreMap from "./StoreMap";
+import { useStore } from "../hooks/useStore";
 
 type Props = {
   store: DataStore[];
 };
 
 export const StoreDetails: React.FC<Props> = ({ store }) => {
+  console.log("🚀 ~ store:", store);
+
+  const { userCoords } = useStore();
+  console.log("🚀 ~ userCoords:", userCoords);
+
   const normalizeCategories = (categories: string[]) => {
     return categories
       .map((categorie) => {
