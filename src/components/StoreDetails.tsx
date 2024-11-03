@@ -2,6 +2,7 @@ import React from "react";
 import { DataStore } from "../typings/global";
 import StoreMap from "./StoreMap";
 import { useStore } from "../hooks/useStore";
+import { calculateAproxCoords } from "../helpers/calculateAproxCoords";
 
 type Props = {
   store: DataStore[];
@@ -11,7 +12,14 @@ export const StoreDetails: React.FC<Props> = ({ store }) => {
   console.log("🚀 ~ store:", store);
 
   const { userCoords } = useStore();
-  console.log("🚀 ~ userCoords:", userCoords);
+
+  const sortedStores = userCoords
+    ? [...store].sort(
+        (a, b) =>
+          calculateAproxCoords(a.coordinates, userCoords) -
+          calculateAproxCoords(b.coordinates, userCoords)
+      )
+    : store;
 
   const normalizeCategories = (categories: string[]) => {
     return categories
@@ -23,7 +31,7 @@ export const StoreDetails: React.FC<Props> = ({ store }) => {
 
   return (
     <>
-      {store.map((item) => (
+      {sortedStores.map((item) => (
         <article
           key={item.storeId}
           style={{ border: "1px solid black", marginBottom: "10px" }}
