@@ -5,7 +5,7 @@ export const ListStores = () => {
   const { data } = useStore();
 
   return (
-    <section>
+    <section className="section-store">
       <StoreDetails store={data} />
     </section>
   );

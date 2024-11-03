@@ -4,7 +4,7 @@ export const SearchAddress = () => {
   const { onHandleChange, onHandleSubmit } = useForm();
 
   return (
-    <div>
+    <aside className="search-address">
       <h2>Buscar direccion</h2>
       <span>
         Ingrese una direccion para obtener el listado ordenado de tiendas mas
@@ -14,6 +14,6 @@ export const SearchAddress = () => {
         <input type="text" name="search" onChange={onHandleChange} />
         <input type="submit" value="Buscar" />
       </form>
-    </div>
+    </aside>
   );
 };

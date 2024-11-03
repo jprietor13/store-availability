@@ -1,12 +1,16 @@
+import { Header } from "./components/Header";
 import { ListStores } from "./components/ListStores";
 import { SearchAddress } from "./components/SearchAddress";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <main>
-      <SearchAddress />
+    <div className="layout">
+      <Header />
       <ListStores />
-    </main>
+      <SearchAddress />
+      <Footer />
+    </div>
   );
 }
 

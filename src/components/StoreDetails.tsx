@@ -9,8 +9,6 @@ type Props = {
 };
 
 export const StoreDetails: React.FC<Props> = ({ store }) => {
-  console.log("🚀 ~ store:", store);
-
   const { userCoords } = useStore();
 
   const sortedStores = userCoords
