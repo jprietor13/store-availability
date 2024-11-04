@@ -1,7 +1,7 @@
 import { useForm } from "../hooks/useForm";
 
 export const SearchAddress = () => {
-  const { onHandleChange, onHandleSubmit } = useForm();
+  const { onHandleChange, onHandleSubmit, formRef } = useForm();
 
   return (
     <aside className="search-address">
@@ -11,7 +11,7 @@ export const SearchAddress = () => {
           Ingrese una dirección para obtener el listado ordenado de tiendas mas
           cercanas
         </span>
-        <form onSubmit={onHandleSubmit}>
+        <form onSubmit={onHandleSubmit} ref={formRef}>
           <div className="form-group">
             <input type="text" name="search" onChange={onHandleChange} />
             <input type="submit" value="Buscar" />

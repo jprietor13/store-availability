@@ -1,7 +1,9 @@
+import { useRef } from "react";
 import { useStore } from "./useStore";
 import { getCoordinates } from "../helpers/getCoordinates";
 
 export const useForm = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const { getAddress, setGetAddress, setUserCoords, setLoading, setError } =
     useStore();
 
@@ -22,13 +24,17 @@ export const useForm = () => {
       } else {
         setError(true);
       }
+      setGetAddress("");
     } catch (err) {
       console.log(err);
       setError(true);
     } finally {
       setLoading(false);
+      if (formRef.current) {
+        formRef.current.reset();
+      }
     }
   };
 
-  return { getAddress, onHandleChange, onHandleSubmit };
+  return { getAddress, onHandleChange, onHandleSubmit, formRef };
 };
