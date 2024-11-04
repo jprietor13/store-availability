@@ -39,7 +39,6 @@ const StoreMap: React.FC<Props> = ({
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
-    console.log("🚀 ~ coordinates:", coordinates);
   };
   const handleClose = () => {
     setOpen(false);
