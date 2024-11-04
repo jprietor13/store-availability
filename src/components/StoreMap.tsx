@@ -27,9 +27,15 @@ type Props = {
   coordinates: Coordinates;
   storeName: string;
   address: string;
+  stock: number;
 };
 
-const StoreMap: React.FC<Props> = ({ coordinates, storeName, address }) => {
+const StoreMap: React.FC<Props> = ({
+  coordinates,
+  storeName,
+  address,
+  stock,
+}) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -40,10 +46,12 @@ const StoreMap: React.FC<Props> = ({ coordinates, storeName, address }) => {
   };
 
   return (
-    <>
+    <div className="container-button">
       <Button
         onClick={handleOpen}
-        style={{ background: "green", color: "white" }}
+        className="btn-open-map"
+        sx={{ textTransform: "none" }}
+        disabled={stock < 7 ? true : false}
       >
         Ver ubicacion
       </Button>
@@ -67,7 +75,7 @@ const StoreMap: React.FC<Props> = ({ coordinates, storeName, address }) => {
           <Button onClick={handleClose}>Cerrar</Button>
         </Box>
       </Modal>
-    </>
+    </div>
   );
 };
 

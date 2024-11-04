@@ -30,20 +30,25 @@ export const StoreDetails: React.FC<Props> = ({ store }) => {
   return (
     <>
       {sortedStores.map((item) => (
-        <article
-          key={item.storeId}
-          style={{ border: "1px solid black", marginBottom: "10px" }}
-        >
+        <article key={item.storeId} className="store-details">
           <h3>{item.storeName}</h3>
-          <p>{item.details.address}</p>
-          <span>{normalizeCategories(item.details.categories)}</span>
+          <p>Dirección: {item.details.address}</p>
+          <span>
+            Categorias: {normalizeCategories(item.details.categories)}
+          </span>
           <br></br>
-          <span>Stock en tienda: {item.stock}</span>
+          <p>
+            Stock en tienda:{" "}
+            <span className={Number(item.stock) < 7 ? "low-stock" : undefined}>
+              {item.stock}
+            </span>
+          </p>
           <div>
             <StoreMap
               coordinates={item.coordinates}
               storeName={item.storeName}
               address={item.details.address}
+              stock={item.stock}
             />
           </div>
         </article>

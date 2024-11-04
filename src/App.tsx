@@ -7,8 +7,10 @@ function App() {
   return (
     <div className="layout">
       <Header />
-      <ListStores />
-      <SearchAddress />
+      <main className="main-section">
+        <ListStores />
+        <SearchAddress />
+      </main>
       <Footer />
     </div>
   );
