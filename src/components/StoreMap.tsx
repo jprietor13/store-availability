@@ -53,7 +53,7 @@ const StoreMap: React.FC<Props> = ({
         sx={{ textTransform: "none" }}
         disabled={stock < 7 ? true : false}
       >
-        Ver ubicacion
+        Ver ubicación
       </Button>
       <Modal
         open={open}
@@ -62,17 +62,21 @@ const StoreMap: React.FC<Props> = ({
         aria-describedby="child-modal-description"
       >
         <Box sx={{ ...style }}>
-          <div>
+          <div className="store-modal-description">
             <h3>{storeName}</h3>
             <span>{address}</span>
           </div>
           <iframe
             width={"100%"}
-            height={"80%"}
+            height={"77%"}
             style={{ flex: 1, border: "none" }}
             src={`https://www.google.com/maps?q=${coordinates.lat},${coordinates.lng}&z=15&output=embed`}
           ></iframe>
-          <Button onClick={handleClose}>Cerrar</Button>
+          <div className="container-close-modal">
+            <Button onClick={handleClose} sx={{ textTransform: "none" }}>
+              Cerrar
+            </Button>
+          </div>
         </Box>
       </Modal>
     </div>

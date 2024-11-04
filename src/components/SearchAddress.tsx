@@ -6,9 +6,9 @@ export const SearchAddress = () => {
   return (
     <aside className="search-address">
       <div className="search-container">
-        <h2>Buscar direccion</h2>
+        <h3>Dirección</h3>
         <span className="search-description">
-          Ingrese una direccion para obtener el listado ordenado de tiendas mas
+          Ingrese una dirección para obtener el listado ordenado de tiendas mas
           cercanas
         </span>
         <form onSubmit={onHandleSubmit}>
