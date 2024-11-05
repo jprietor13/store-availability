@@ -28,6 +28,7 @@ type Props = {
   storeName: string;
   address: string;
   stock: number;
+  isOpen: boolean;
 };
 
 const StoreMap: React.FC<Props> = ({
@@ -35,6 +36,7 @@ const StoreMap: React.FC<Props> = ({
   storeName,
   address,
   stock,
+  isOpen,
 }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
@@ -50,7 +52,7 @@ const StoreMap: React.FC<Props> = ({
         onClick={handleOpen}
         className="btn-open-map"
         sx={{ textTransform: "none" }}
-        disabled={stock < 7 ? true : false}
+        disabled={stock < 7 || !isOpen ? true : false}
       >
         Ver ubicación
       </Button>

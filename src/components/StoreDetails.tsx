@@ -31,7 +31,10 @@ export const StoreDetails: React.FC<Props> = ({ store }) => {
     <>
       {sortedStores.map((item) => (
         <article key={item.storeId} className="store-details">
-          <h3>{item.storeName}</h3>
+          <h3>
+            {item.storeName}{" "}
+            <span>{item.isOpen ? "(abierto)" : "(cerrado)"}</span>
+          </h3>
           <p>Dirección: {item.details.address}</p>
           <span>
             Categorias: {normalizeCategories(item.details.categories)}
@@ -52,6 +55,7 @@ export const StoreDetails: React.FC<Props> = ({ store }) => {
               storeName={item.storeName}
               address={item.details.address}
               stock={item.stock}
+              isOpen={item.isOpen}
             />
           </div>
         </article>
