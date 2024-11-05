@@ -4,15 +4,16 @@
 
 #
 
-#
-
 ## Caracteristicas
 
 ##### InstaStore es una aplicación desarrollada con React js la cual muestra un listado de tiendas con su nombre, dirección, categorias de productos, stock en tienda y hora de entrega. tambien, cuenta con un botón para ver la ubicación de la tienda y que el usuario pueda saber a cuanto esta de distancia de donde el esté, tiene un campo de texto en donde el usuario puede ingresar una dirección y en base a ella, la aplicación ordena las tiendas de la mas cercana a la mas lejana para saber cual es la mas idonea para realizar la recogida del pedido.
 
 #
 
-#
+## Screenshots
+
+![desktop](./src/assets/images/desktop.png)
+![Movile](./src/assets/images/responsive.png)
 
 ## Tecnologias usadas
 
