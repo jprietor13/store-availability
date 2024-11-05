@@ -23,6 +23,7 @@
 - OpenStreetMap API
 - Github
 - Yarn
+- TypeScript
 
 ## Instalación
 
