@@ -43,6 +43,9 @@ export const StoreDetails: React.FC<Props> = ({ store }) => {
               {item.stock}
             </span>
           </p>
+          <p>
+            Hora de entrega: <span>{item.nextDeliveryTime}</span>
+          </p>
           <div>
             <StoreMap
               coordinates={item.coordinates}
