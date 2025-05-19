@@ -1,6 +1,6 @@
 # InstaStore Challenge
 
-##### El objetivo de esta aplicacion es solucionar el reto propuesto en el challenge propuesto por la empresa en donde se pueda visualizar una interfaz que proporcione información de las tiendas más cercanas disponibles para poder recibir su pedido
+##### El objetivo de esta aplicacion es poder visualizar una interfaz que proporcione información de las tiendas más cercanas disponibles para poder recibir un pedido a un cliente.
 
 #
 
@@ -37,7 +37,7 @@ Verificar que se tenga Nodejs instalado o en una version superior a la 16 (v22.4
 Una vez descargado el repositorio, se puede ver el proyecto con un editor como VS Code o sublime, tambien, se puede abrir directamente desde una terminal para ejecutar los comandos
 
 ```sh
-- cd instastore-challenge-juanprieto
+- cd store-availability
 - yarn
 - npm run dev
 ```
