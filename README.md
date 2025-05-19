@@ -1,4 +1,4 @@
-# InstaStore Challenge
+# Store Availability
 
 ##### El objetivo de esta aplicacion es poder visualizar una interfaz que proporcione información de las tiendas más cercanas disponibles para poder recibir un pedido a un cliente.
 
